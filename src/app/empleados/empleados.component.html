@@ -4,6 +4,20 @@
 <button (click) = "holaMundo('guapisimo')">Saludar</button>
 <br>
 <button (click) = "darValor()">Mostrar texto</button>
-<div *ngIf = "esperandoValor != ''">
-     El valor es: {{esperandoValor}}
+<div *ngIf = "mostrar != true">
+     El valor es: {{nombreEmpleado}}
 </div>
+<ul>
+    <li *ngFor = "let elementos of arrayay; let i = index">
+        {{i + 1}}-{{elementos}}     
+    </li>
+</ul>
+<ul [ngSwitch]="profeLengua" >
+    <li *ngSwitchCase ="'Juan'">
+        Juan
+    </li>
+    <li *ngSwitchCase ="'Tate'">
+        Tate
+        </li>
+        
+    </ul>
